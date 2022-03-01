@@ -1,0 +1,52 @@
+{
+ "properties": {
+  "displayName": "Tags_Intiative",
+  "policyType": "Custom",
+  "description": "Tagging policies grouped as initiative",
+  "metadata": {
+   "category": "Tags",
+   "version": "1.0",
+   "createdBy": "a43da5cb-4020-446d-8fd7-060e8573ae73",
+   "createdOn": "2022-02-14T08:11:23.520001Z",
+   "updatedBy": "a43da5cb-4020-446d-8fd7-060e8573ae73",
+   "updatedOn": "2022-02-14T11:28:44.8877831Z"
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "Require a tag on resource groups_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96670d01-0a4d-4649-9c89-2d3abc0a5025",
+    "parameters": {
+     "tagName": {
+      "value": "Environment"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Inherit a tag from the resource group if missing_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ea3f2387-9b95-492a-a190-fcdc54f7b070",
+    "parameters": {
+     "tagName": {
+      "value": "Environment"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Require a tag on resources_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/871b6d14-10aa-478d-b590-94f262ecfa99",
+    "parameters": {
+     "tagName": {
+      "value": "CostCenter"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/subscriptions/88448399-6e8c-4f93-a81b-814a23963452/providers/Microsoft.Authorization/policySetDefinitions/c5933e5ab54942389f1a7fd5",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "c5933e5ab54942389f1a7fd5"
+}
