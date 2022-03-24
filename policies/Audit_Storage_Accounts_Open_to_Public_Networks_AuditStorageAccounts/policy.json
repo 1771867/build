@@ -1,0 +1,35 @@
+{
+ "properties": {
+  "displayName": "Audit Storage Accounts Open to Public Networks",
+  "policyType": "Custom",
+  "mode": "All",
+  "metadata": {
+   "createdBy": "8f69405f-b132-41f7-bfe5-c1be6a199423",
+   "createdOn": "2022-02-17T06:56:43.0847982Z",
+   "updatedBy": "06fc322e-10e8-415d-8072-d2c73f6df89b",
+   "updatedOn": "2022-03-19T09:21:47.7386556Z",
+   "category": "Storage"
+  },
+  "parameters": {},
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Storage/storageAccounts"
+     },
+     {
+      "field": "Microsoft.Storage/storageAccounts/networkAcls.defaultAction",
+      "equals": "Allow"
+     }
+    ]
+   },
+   "then": {
+    "effect": "audit"
+   }
+  }
+ },
+ "id": "/subscriptions/a75facd1-2fcd-43e2-bb6b-4d7f2c56cd76/providers/Microsoft.Authorization/policyDefinitions/AuditStorageAccounts",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "AuditStorageAccounts"
+}
